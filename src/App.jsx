@@ -1,12 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import PortfolioIndex from './components/PortfolioIndex'
+import { Routes, Route } from 'react-router-dom'
+import './App.scss'
+import Layout from './components/Layout'
+import Home from './components/Home'
 
 function App() { 
   return (
-      <PortfolioIndex/>
+     <>
+      <Routes>
+        <Route path="/" element={<Layout/>}/>
+        {/* <Route index element={<Home/>}/> */}
+      </Routes>
+     </>
   )
 }
 
